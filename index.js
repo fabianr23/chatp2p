@@ -11,7 +11,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 	})
 
 	peer.on('signal',function(data){
-		let IdCorto = Math.round(Math.random()*100000);
+		let IdCorto = 'User' + Math.round(Math.random()*100000);
 		let IdLargo=JSON.stringify(data);
 		document.getElementById('yourId').value = IdCorto;
 		console.log(JSON.stringify(data));
@@ -43,10 +43,10 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 	})
 
 	peer.on('stream', function (stream) {
-    var video = document.createElement('video')
-    document.body.appendChild(video)
+    	var video = document.createElement('video')
+    	document.body.appendChild(video)
 
-    video.src = window.URL.createObjectURL(stream)
-    video.play()
+    	video.src = window.URL.createObjectURL(stream)
+    	video.play()
   })
 })

@@ -2,6 +2,7 @@
 	width: 90%;
 	margin: 0 auto;
 }
+
 .boton-conectar {
     background: #2EFEC8;
     color: #fff;
@@ -62,20 +63,21 @@ textarea#yourMessage {
 }
 
 .header {
-    text-align: center;
+    text-align: left;
     height: 80px;
     background: #0489B1;
     font-size: 32px;
     color: #fff;
-
     padding-top: 15px;
 }
 
 #loginconexion{
-	display:block;
+  background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
+
 }
 
 #mensajerespuesta{
-	display:none;
-
+	/*display:none;*/
+  font: arial;
 }
+
