@@ -1,3 +1,7 @@
+
+body{
+  overflow: hidden;
+}
 .contenedor-stream{
 	width: 90%;
 	margin: 0 auto;
@@ -63,16 +67,16 @@ textarea#yourMessage {
 }
 
 .header {
-    text-align: left;
-    height: 80px;
-    background: #0489B1;
+    text-align: center;
+    height: 10px;
+    background: rgb(100,100,100);
     font-size: 32px;
     color: #fff;
     padding-top: 15px;
 }
 
 #loginconexion{
-  background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
+  background: url("file://cp.jpg");
 
 }
 
@@ -81,3 +85,37 @@ textarea#yourMessage {
   font: arial;
 }
 
+.spinner{
+    width: 15px;
+    height: 15px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+
+  height: 100%;
+  width: 100%;
+  background: rgba(255,255,255,.8);
+  left:0;
+  top: 0;
+}
