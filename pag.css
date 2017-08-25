@@ -68,15 +68,21 @@ textarea#yourMessage {
 
 .header {
     text-align: center;
-    height: 10px;
+    height: 80px;
     background: rgb(100,100,100);
     font-size: 32px;
     color: #fff;
     padding-top: 15px;
+
 }
 
 #loginconexion{
-  background: url("file://cp.jpg");
+  background-image: url("cp.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px 1580px;
+  background-attachment: fixed;
+  background-position: center center;
+
 
 }
 
