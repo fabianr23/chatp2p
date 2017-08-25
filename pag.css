@@ -1,6 +1,7 @@
 .contenedor-stream{
 	width: 90%;
 	margin: 0 auto;
+  padding-top: 25px;
 }
 
 .boton-conectar {
@@ -41,7 +42,8 @@
 	height: 500px;
 }
 
-div#conversacion {
+div#messages {
+    margin-top: 20px;
     width: 90%;
     box-shadow: 0 0 10px #ccc;
     height: 200px;
@@ -64,6 +66,7 @@ textarea#yourMessage {
 
 .header {
     text-align: left;
+    padding-left:10%;
     height: 80px;
     background: #0489B1;
     font-size: 32px;
@@ -72,12 +75,31 @@ textarea#yourMessage {
 }
 
 #loginconexion{
+   display:block;
   background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
 
 }
 
 #mensajerespuesta{
-	/*display:none;*/
-  font: arial;
+	/*display:none*/  font: arial;
 }
 
+.boton-cerrar {
+    float: right;
+    margin-top: 6px;
+    background: #2EFEC8; 
+}
+
+
+
+.icono-camara {
+    float: right;
+    max-width: 42px;
+    margin: 0 100px 0 0;
+}
+
+.icono-camara img {
+    width: 100%;
+}
+
+    

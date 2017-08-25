@@ -37,24 +37,35 @@
         <div class = "col-md-12 conatiner2">
           <div  class=" contenedor-stream">
              <div class=contenedor-left> 
-                <div id="conversacion"></div>
+              <div id="IDSesion">
+                     
+                </div>
+                <div id="messages"></div>
                 <textarea id="yourMessage"></textarea>
                   <div>
                     <button class="btn btn-default boton-enviar" type="button" id="send">Send</button>
                   </div>
-                  <div>
-                    <div class="row message-bubble">
-                      <p>Your messages:</p>
-                      <pre id="messages"></pre>
-                    </div>
-                  </div>
+                  
               </div>
-          </div>
-          
-          <div class="col-md-6 camara" id = cambutton>
-              <span class="input-group-btn"> 
+              <div class="contenedor-right"  id = "container-camara">
+                  <div>
+                        <button class="btn btn-default boton-cerrar" type="button" id="cerrar">Cerrar</button>
+                  </div>
+                  <div class="icono-camara">
+                        <img src="/image/camera.png" alt="prender camara"/>
+                  </div>
+                  <div class="icono-camara">
+                        <img src="/image/offcamera.png" alt="apagar camara"/>
+                  </div>
+                  <div>
+                        
+                    </div>
+                  <span class="input-group-btn"> 
           </div>
            
+          </div>
+          
+          
        </div>
     </div>
     

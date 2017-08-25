@@ -14,6 +14,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		let IdCorto = 'User' + Math.round(Math.random()*100000);
 		let IdLargo=JSON.stringify(data);
 		document.getElementById('yourId').value = IdCorto;
+		document.getElementById('IDSesion').innerHTML = 'ID de sesión <strong>'+IdCorto+'</strong>';
 		console.log(JSON.stringify(data));
 		localStorage.setItem(IdCorto, IdLargo);
 	})
@@ -29,8 +30,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		localStorage.removeItem(IdStorage);
 		peer.signal(otherId);
 		document.getElementById('loginconexion').style.display="none";
-		document.getElementById('mensajerespuesta').style.display="block"; 
-		
+		document.getElementById('mensajerespuesta').style.display="block";
 	})
 
 	document.getElementById('send').addEventListener('click',function(){
@@ -44,9 +44,10 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 
 	peer.on('stream', function (stream) {
     	var video = document.createElement('video')
-    	document.body.appendChild(video)
-
-    	video.src = window.URL.createObjectURL(stream)
-    	video.play()
+    	var videocamara = document.getElementById("container-camara");
+		videocamara.appendChild(video);
+    	/*document.body.appendChild(video)*/
+    	video.src = window.URL.createObjectURL(stream);
+    	video.play();
   })
 })
