@@ -5,13 +5,13 @@
 }
 
 .boton-conectar {
-    background: #2EFEC8;
+    background: #0489B1;
     color: #fff;
     width: 200px;
     margin-top: 20px;
 }
 .boton-enviar {
-    background: #2EFEC8;
+    background: #0489B1;
     color: #fff;
     width: 200px;
     float: right;
@@ -24,8 +24,8 @@
       width:200px;
   }
 .boton-enviar:hover {
-      background: #00FFFF;
-      color: #000;
+      background: #337ab7;
+      color: #fff;
       width:200px;
   }
 .table{
@@ -87,9 +87,13 @@ textarea#yourMessage {
 .boton-cerrar {
     float: right;
     margin-top: 6px;
-    background: #2EFEC8; 
+    background: #0489B1; 
 }
-
+.boton-cerrar:hover {
+      background: #337ab7;
+      float: right;
+      margin-top: 6px;
+  }
 
 
 .icono-camara {
