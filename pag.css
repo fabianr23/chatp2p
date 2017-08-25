@@ -6,16 +6,17 @@ body{
 .contenedor-stream{
 	width: 90%;
 	margin: 0 auto;
+  padding-top: 25px;
 }
 
 .boton-conectar {
-    background: #2EFEC8;
+    background: #0489B1;
     color: #fff;
     width: 200px;
     margin-top: 20px;
 }
 .boton-enviar {
-    background: #2EFEC8;
+    background: #0489B1;
     color: #fff;
     width: 200px;
     float: right;
@@ -28,8 +29,8 @@ body{
       width:200px;
   }
 .boton-enviar:hover {
-      background: #00FFFF;
-      color: #000;
+      background: #337ab7;
+      color: #fff;
       width:200px;
   }
 .table{
@@ -46,7 +47,8 @@ body{
 	height: 500px;
 }
 
-div#conversacion {
+div#messages {
+    margin-top: 20px;
     width: 90%;
     box-shadow: 0 0 10px #ccc;
     height: 200px;
@@ -70,7 +72,7 @@ textarea#yourMessage {
 .header {
     text-align: center;
     height: 80px;
-    background: rgb(100,100,100);
+    background: rgb(50,100,150);
     font-size: 32px;
     color: #fff;
     padding-top: 15px;
@@ -87,8 +89,7 @@ textarea#yourMessage {
 }
 
 #mensajerespuesta{
-	/*display:none;*/
-  font: arial;
+	/*display:none*/  font: arial;
 }
 
 .spinner{
