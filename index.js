@@ -38,13 +38,32 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		peer.send(yourMessage)
 	})
 
+	document.getElementById('camaraon').addEventListener('click',function(){
+		document.getElementById('camaraon').style.display="none";
+		document.getElementById('camaraoff').style.display="block";
+		document.getElementById('camarablock').style.display="block";
+	})
+	
+
+	document.getElementById('camaraoff').addEventListener('click',function(){
+		document.getElementById('camaraon').style.display="block";
+		document.getElementById('camaraoff').style.display="none";
+		document.getElementById('camarablock').style.display="none";
+	})
+
+	document.getElementById('cerrar').addEventListener('click',function(){
+		peer.destroy();
+		document.getElementById('loginconexion').style.display="block";
+		document.getElementById('mensajerespuesta').style.display="none";
+	})
+
 	peer.on ('data',function(data){
 		document.getElementById('messages').textContent += data +'\n'
 	})
 
 	peer.on('stream', function (stream) {
     	var video = document.createElement('video')
-    	var videocamara = document.getElementById("container-camara");
+    	var videocamara = document.getElementById("camarablock");
 		videocamara.appendChild(video);
     	/*document.body.appendChild(video)*/
     	video.src = window.URL.createObjectURL(stream);

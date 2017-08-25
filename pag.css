@@ -28,13 +28,12 @@
       color: #fff;
       width:200px;
   }
-.table{
-	padding: 30px 10px;
+.table {
+    padding: 30px 10px;
     border: PowderBlue 5px solid;
     border-radius: 20px;
     width: 30%;
     background-color: #CEE3F6;
-    margin-top: 5%;
     min-width: 300px;
 }
 
@@ -48,6 +47,7 @@ div#messages {
     box-shadow: 0 0 10px #ccc;
     height: 200px;
     overflow-y: scroll;
+    padding: 15px
 }
 
 textarea#yourMessage {
@@ -55,6 +55,7 @@ textarea#yourMessage {
     box-shadow: 0 0 15px #ccc;
     margin-top: 20px;
     width: 90%;
+    padding: 15px;
 }
 .contenedor-left{
 	width: 40%;
@@ -74,36 +75,52 @@ textarea#yourMessage {
     padding-top: 15px;
 }
 
-#loginconexion{
-   display:block;
-  background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
-
+#loginconexion {
+    display: block;
+    background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
+    margin: 0;
+    
+    padding: 10% 0;
+    background-size: cover;
 }
 
 #mensajerespuesta{
-	/*display:none*/  font: arial;
+	display:none;
+  font: arial;
+
 }
 
 .boton-cerrar {
     float: right;
-    margin-top: 6px;
+    margin-top: -4px;
+    margin-bottom: 10px;
     background: #0489B1; 
 }
 .boton-cerrar:hover {
       background: #337ab7;
-      float: right;
-      margin-top: 6px;
   }
 
-
+#camaraon{
+  display: none;
+}
 .icono-camara {
     float: right;
     max-width: 42px;
-    margin: 0 100px 0 0;
+    margin: -10px 100px 0 0;
+    cursor: pointer;
 }
 
 .icono-camara img {
     width: 100%;
 }
 
+div#container-camara {
+    float: left;
+    width: 50%;
+    margin-left: 10%;
+}
     
+div#camarablock video {
+    width: 100%;
+}
+
