@@ -28,6 +28,8 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		var otherId = JSON.parse(respst);
 		localStorage.removeItem(IdStorage);
 		peer.signal(otherId);
+		document.getElementById('loginconexion').style.display="none";
+		document.getElementById('mensajerespuesta').style.display="block"; 
 		
 	})
 

@@ -1,22 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Welcome chat</title>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="pag.css">
   </head>
   <body>
+ <div class="header">
+    <p> CHAT P2P</p>
+ </div>
+  <div class="row" id="loginconexion">
+    <div class="container1" align="center">
+      <div class="table">
+        <div class="SuID">
+          <label>Tu ID:</label><br/>
+          <div class="input-group">
+            <input type="text" class="form-control" id="yourId">
+            <span class="input-group-btn">
+          </div>
+          </div>
+        <div class="otroID">
+          <label>ID de conexión:</label><br/>
+          <div class="input-group">
+          <input type="text" class="form-control" id="otherId">
+          <span class="input-group-btn">
+          </div>
+        </div>
+        <div>
+         <button type="button" id="connect" class="btn btn-default boton-conectar">connect</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="row" id="mensajerespuesta">
+        <div class = "col-md-12 conatiner2">
+          <div  class=" contenedor-stream">
+             <div class=contenedor-left> 
+                <div id="conversacion"></div>
+                <textarea id="yourMessage"></textarea>
+                  <div>
+                    <button class="btn btn-default boton-enviar" type="button" id="send">Send</button>
+                  </div>
+                  <div>
+                    <div class="row message-bubble">
+                      <p>Your messages:</p>
+                      <pre id="messages"></pre>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-6 camara">
+              <span class="input-group-btn"> 
+          </div>
+           
+       </div>
+    </div>
+    
+  
 
-    <label>Your ID:</label><br/>
-    <textarea id="yourId"></textarea><br/>
-    <label>Other ID:</label><br/>
-    <textarea id="otherId"></textarea>
-    <button id="connect">connect</button><br/>
-
-    <label>Enter Message:</label><br/>
-    <textarea id="yourMessage"></textarea>
-    <button id="send">send</button>
-    <pre id="messages"></pre>
-
-    <script src="bundle.js" charset="utf-8"></script>
+  <script src="bundle.js" charset="utf-8"></script>
   </body>
 </html>
+

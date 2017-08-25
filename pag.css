@@ -1,0 +1,81 @@
+.contenedor-stream{
+	width: 90%;
+	margin: 0 auto;
+}
+.boton-conectar {
+    background: #2EFEC8;
+    color: #fff;
+    width: 200px;
+    margin-top: 20px;
+}
+.boton-enviar {
+    background: #2EFEC8;
+    color: #fff;
+    width: 200px;
+    float: right;
+    margin-right: 10%;
+    margin-top: 20px;
+}
+.boton-conectar:hover {
+      background: #337ab7;
+      color: #fff;
+      width:200px;
+  }
+.boton-enviar:hover {
+      background: #00FFFF;
+      color: #000;
+      width:200px;
+  }
+.table{
+	padding: 30px 10px;
+    border: PowderBlue 5px solid;
+    border-radius: 20px;
+    width: 30%;
+    background-color: #CEE3F6;
+    margin-top: 5%;
+    min-width: 300px;
+}
+
+.contenedor-mensaje{
+	height: 500px;
+}
+
+div#conversacion {
+    width: 90%;
+    box-shadow: 0 0 10px #ccc;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+textarea#yourMessage {
+    border: none;
+    box-shadow: 0 0 15px #ccc;
+    margin-top: 20px;
+    width: 90%;
+}
+.contenedor-left{
+	width: 40%;
+	float:left;
+}
+.otroID{
+	margin-top: 20px;
+}
+
+.header {
+    text-align: center;
+    height: 80px;
+    background: #0489B1;
+    font-size: 32px;
+    color: #fff;
+
+    padding-top: 15px;
+}
+
+#loginconexion{
+	display:block;
+}
+
+#mensajerespuesta{
+	display:none;
+
+}
