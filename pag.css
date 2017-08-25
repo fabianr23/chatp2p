@@ -1,6 +1,7 @@
 
 body{
   overflow: hidden;
+  font-family: monospace;
 }
 .contenedor-stream{
 	width: 90%;
@@ -73,7 +74,6 @@ textarea#yourMessage {
     font-size: 32px;
     color: #fff;
     padding-top: 15px;
-
 }
 
 #loginconexion{
@@ -124,4 +124,9 @@ textarea#yourMessage {
   background: rgba(255,255,255,.8);
   left:0;
   top: 0;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
 }

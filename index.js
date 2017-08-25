@@ -1,4 +1,8 @@
+//Global
 var getUserMedia = require('getusermedia')
+var overlay = document.getElementById("Overlay");
+overlay.style.display = 'none';
+
 
 getUserMedia({ video: true, audio: false }, function (err, stream) {
   if (err) return console.error(err)
@@ -18,13 +22,12 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		localStorage.setItem(IdCorto, IdLargo);
 	})
 
-	var overlay = document.getElementById("Overlay");
 	
 
 	document.getElementById('connect').addEventListener('click',function(){
 		
 		
-		overlay.style.display = 'visible';
+		
 		console.log("1: ");
 		let IdStorage=document.getElementById('otherId').value;
 		// var otherId = JSON.parse(document.getElementById('otherId').value)
@@ -36,6 +39,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		peer.signal(otherId);
 		document.getElementById('loginconexion').style.display="none";
 		document.getElementById('mensajerespuesta').style.display="block"; 
+		overlay.style.display = 'visible';
 		
 
 		
