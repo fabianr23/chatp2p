@@ -1,7 +1,7 @@
 //Global
 var getUserMedia = require('getusermedia')
 var overlay = document.getElementById("Overlay");
-overlay.style.display = 'none';
+overlay.style.display = 'block';
 
 
 getUserMedia({ video: true, audio: false }, function (err, stream) {
