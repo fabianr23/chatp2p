@@ -33,13 +33,12 @@ body{
       color: #fff;
       width:200px;
   }
-.table{
-	padding: 30px 10px;
+.table {
+    padding: 30px 10px;
     border: PowderBlue 5px solid;
     border-radius: 20px;
     width: 30%;
     background-color: #CEE3F6;
-    margin-top: 5%;
     min-width: 300px;
 }
 
@@ -53,6 +52,7 @@ div#messages {
     box-shadow: 0 0 10px #ccc;
     height: 200px;
     overflow-y: scroll;
+    padding: 15px
 }
 
 textarea#yourMessage {
@@ -60,6 +60,7 @@ textarea#yourMessage {
     box-shadow: 0 0 15px #ccc;
     margin-top: 20px;
     width: 90%;
+    padding: 15px;
 }
 .contenedor-left{
 	width: 40%;
@@ -78,56 +79,53 @@ textarea#yourMessage {
     padding-top: 15px;
 }
 
-#loginconexion{
-  background-image: url("cp.jpg");
-  background-repeat: no-repeat;
-  background-size: 1500px 1580px;
-  background-attachment: fixed;
-  background-position: center center;
-
-
+#loginconexion {
+    display: block;
+    background: url(https://pbs.twimg.com/media/DIE6OWfWAAY4m9G.jpg:large);
+    margin: 0;
+    
+    padding: 10% 0;
+    background-size: cover;
 }
 
 #mensajerespuesta{
-	/*display:none*/  font: arial;
+	display:none;
+  font: arial;
+
 }
 
-.spinner{
-    width: 15px;
-    height: 15px;
-    
-    border: 2px solid #f3f3f3;
-    border-top:3px solid #f25a41;
-    border-radius: 100%;
-    
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    
-    animation: spin 1s infinite linear;
+.boton-cerrar {
+    float: right;
+    margin-top: -4px;
+    margin-bottom: 10px;
+    background: #0489B1; 
 }
+.boton-cerrar:hover {
+      background: #337ab7;
+  }
 
-@keyframes spin {
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
+#camaraon{
+  display: none;
 }
-
-#overlay{
-
-  height: 100%;
-  width: 100%;
-  background: rgba(255,255,255,.8);
-  left:0;
-  top: 0;
+.icono-camara {
+    float: right;
+    max-width: 42px;
+    margin: -10px 100px 0 0;
+    cursor: pointer;
 }
 
 @font-face {
     font-family: myFirstFont;
     src: url(sansation_light.woff);
 }
+
+div#container-camara {
+    float: left;
+    width: 50%;
+    margin-left: 10%;
+}
+    
+div#camarablock video {
+    width: 100%;
+}
+
