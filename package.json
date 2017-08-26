@@ -13,6 +13,6 @@
   },
   "dependencies": {
     
-    "simple-peer": "^5.11.4"
+    "simple-peer": "^5.11.4", "budo":"", "getusermedia":"", "jquery":"","jquery-circle-progress":""
   }
 }
