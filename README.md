@@ -11,8 +11,8 @@ Al finalizar la instalación ejecutar el comando:
 
 - npm start
 
-Para ejecutar el proyecto,  debe tener instalado node.js en su equipo
-y se recomienda emplear la ultima version.
+Para ejecutar la aplicación,  debe tener instalado node.js en su equipo
+(se recomienda emplear la ultima version.)
 
 ->Instrucciones de uso
 
