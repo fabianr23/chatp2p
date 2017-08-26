@@ -100,6 +100,7 @@ textarea#yourMessage {
     margin-bottom: 10px;
     background: #0489B1; 
 }
+
 .boton-cerrar:hover {
       background: #337ab7;
   }
@@ -112,6 +113,10 @@ textarea#yourMessage {
     max-width: 42px;
     margin: -10px 100px 0 0;
     cursor: pointer;
+}
+
+.icono-camara img {
+    width: 100%;
 }
 
 @font-face {

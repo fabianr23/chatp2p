@@ -22,8 +22,8 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 
 	
 	document.getElementById('connect').addEventListener('click',function(){		
-		var overlay = document.getElementById("overlay");
-		overlay.style.display = "block";
+		// var overlay = document.getElementById("overlay");
+		// overlay.style.display = "block";
 
 		console.log("1: ");
 		let IdStorage=document.getElementById('otherId').value;
@@ -34,15 +34,21 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		var otherId = JSON.parse(respst);
 		localStorage.removeItem(IdStorage);
 		peer.signal(otherId);
-		overlay.style.display = "none";
+		// overlay.style.display = "none";
 		document.getElementById('loginconexion').style.display="none";
 		document.getElementById('mensajerespuesta').style.display="block"; 
 		
 	})
 
 	document.getElementById('send').addEventListener('click',function(){
-		var yourMessage = document.getElementById('yourMessage').value
-		peer.send(yourMessage)
+		let idMessager = document.getElementById('IDSesion').textContent;
+		let preMessage = idMessager + " escribió: ";
+		let yourMessage = document.getElementById('yourMessage').value;
+		document.getElementById('messages').innerHTML += '<strong>Tu dices: </strong>' 
+		+ yourMessage+'<br />';
+		let ComposeMessage = '<strong>'+preMessage+'</strong>' + yourMessage;
+		document.getElementById('yourMessage').value = "";
+		peer.send(ComposeMessage);
 	})
 
 	document.getElementById('camaraon').addEventListener('click',function(){
@@ -65,7 +71,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 	})
 
 	peer.on ('data',function(data){
-		document.getElementById('messages').textContent += data +'\n'
+		document.getElementById('messages').innerHTML += data +'<br />'
 	})
 
 	peer.on('stream', function (stream) {
