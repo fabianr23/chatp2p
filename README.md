@@ -9,6 +9,9 @@ En la ruta del proyecto ejecutar:
 - npm install simple-peer 
 - npm install budo -g
 - npm install getusermedia
+- npm install jquery
+- npm install jquery-circle-progress
+
 - npm start
 
 Para ejecutar el proyecto, se debe tener instalado node.js en el equipo,

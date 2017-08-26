@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="pag.css">
+    <!-- jQuery-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/jquery-circle-progress/dist/circle-progress.js"></script>
+
+
   </head>
   <body>
  <div class="header">
@@ -33,9 +38,20 @@
          <button type="button" id="connect" class="btn btn-default boton-conectar">connect</button>         
         </div>
 
-        <div id = "overlay"  style="visibility: hidden">
-          <div class="spinner"></div>
-        </div>        
+        <div id="circle"></div>
+
+        <script>
+          $('#circle').circleProgress({
+          value:2,
+          size: 70,
+          fill: {
+            gradient: ["red", "orange"]
+          },
+          animation:{duration: 80000, easing: "circleProgressEasing" }
+          <!--animationStartValue: {1.0}-->
+        });
+        </script>
+      
        
 
       </div>
@@ -77,6 +93,8 @@
   
 
   <script src="bundle.js" charset="utf-8"></script>
+  
+
   </body>
 </html>
 
