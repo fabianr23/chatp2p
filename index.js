@@ -1,3 +1,4 @@
+//Global
 var getUserMedia = require('getusermedia')
 
 getUserMedia({ video: true, audio: false }, function (err, stream) {
@@ -19,7 +20,11 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		localStorage.setItem(IdCorto, IdLargo);
 	})
 
-	document.getElementById('connect').addEventListener('click',function(){
+	
+	document.getElementById('connect').addEventListener('click',function(){		
+		var overlay = document.getElementById("overlay");
+		overlay.style.display = "block";
+
 		console.log("1: ");
 		let IdStorage=document.getElementById('otherId').value;
 		// var otherId = JSON.parse(document.getElementById('otherId').value)
@@ -29,8 +34,10 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		var otherId = JSON.parse(respst);
 		localStorage.removeItem(IdStorage);
 		peer.signal(otherId);
+		overlay.style.display = "none";
 		document.getElementById('loginconexion').style.display="none";
-		document.getElementById('mensajerespuesta').style.display="block";
+		document.getElementById('mensajerespuesta').style.display="block"; 
+		
 	})
 
 	document.getElementById('send').addEventListener('click',function(){
@@ -70,3 +77,4 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     	video.play();
   })
 })
+
