@@ -1,6 +1,5 @@
 //Global
 var getUserMedia = require('getusermedia')
-var overlay = document.getElementById("overlay");
 
 getUserMedia({ video: true, audio: false }, function (err, stream) {
   if (err) return console.error(err)
@@ -22,10 +21,10 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 	})
 
 	
-	document.getElementById('connect').addEventListener('click',function(){
-		
-		
-		
+	document.getElementById('connect').addEventListener('click',function(){		
+		var overlay = document.getElementById("overlay");
+		overlay.style.display = "block";
+
 		console.log("1: ");
 		let IdStorage=document.getElementById('otherId').value;
 		// var otherId = JSON.parse(document.getElementById('otherId').value)
@@ -35,15 +34,11 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 		var otherId = JSON.parse(respst);
 		localStorage.removeItem(IdStorage);
 		peer.signal(otherId);
+		overlay.style.display = "none";
 		document.getElementById('loginconexion').style.display="none";
 		document.getElementById('mensajerespuesta').style.display="block"; 
-		overlay.style.display = 'none';
-	})
-		
-
 		
 	})
-
 
 	document.getElementById('send').addEventListener('click',function(){
 		var yourMessage = document.getElementById('yourMessage').value
